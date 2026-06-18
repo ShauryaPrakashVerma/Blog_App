@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Lost in the Archives</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        font-family: "Segoe UI", sans-serif;
+        overflow: hidden;
+        color: white;
+        position: relative;
+    }
+
+    .container {
+        text-align: center;
+        max-width: 800px;
+        padding: 40px;
+        z-index: 2;
+    }
+
+    .error-code {
+        font-size: 10rem;
+        font-weight: 900;
+        color: #f59e0b;
+        line-height: 1;
+        text-shadow: 0 0 25px rgba(245, 158, 11, 0.4);
+        animation: pulse 3s infinite;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        margin: 20px 0;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        line-height: 1.8;
+        margin-bottom: 35px;
+    }
+
+    .home-btn {
+        display: inline-block;
+        text-decoration: none;
+        background: #f59e0b;
+        color: #111827;
+        padding: 14px 30px;
+        border-radius: 50px;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+
+    .home-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 20px rgba(245, 158, 11, 0.35);
+    }
+
+    .quote {
+        margin-top: 40px;
+        font-style: italic;
+        color: #94a3b8;
+    }
+
+    .floating {
+        position: absolute;
+        font-size: 2rem;
+        opacity: 0.08;
+        animation: float 15s linear infinite;
+    }
+
+    @keyframes float {
+        from {
+            transform: translateY(120vh) rotate(0deg);
+        }
+
+        to {
+            transform: translateY(-150px) rotate(360deg);
+        }
+    }
+
+    @keyframes pulse {
+        0%,100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.04);
+        }
+    }
+
+    .book1 { left: 10%; animation-delay: 0s; }
+    .book2 { left: 25%; animation-delay: 3s; }
+    .book3 { left: 45%; animation-delay: 6s; }
+    .book4 { left: 65%; animation-delay: 9s; }
+    .book5 { left: 85%; animation-delay: 12s; }
+
+    @media(max-width:768px){
+
+        .error-code{
+            font-size:6rem;
+        }
+
+        .title{
+            font-size:1.8rem;
+        }
+
+        .subtitle{
+            font-size:1rem;
+        }
+    }
+</style>
+
+
+</head>
+<body>
+
+<div class="floating book1">📚</div>
+<div class="floating book2">📰</div>
+<div class="floating book3">📖</div>
+<div class="floating book4">✍️</div>
+<div class="floating book5">🖋️</div>
+
+<div class="container">
+
+    <div class="error-code">404</div>
+
+    <h1 class="title">Oops! This Article Has Gone Missing</h1>
+
+    <p class="subtitle">
+        The page you're looking for seems to have wandered into the
+        forgotten corners of the internet. It may have been moved,
+        deleted, or perhaps it was never written at all.
+    </p>
+
+    <a href="/" class="home-btn">
+        Return to Homepage
+    </a>
+
+    <p class="quote">
+        "Every great reader gets lost in the archives sometimes."
+    </p>
+
+</div>
+
+
+</body>
+</html>
