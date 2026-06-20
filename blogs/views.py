@@ -19,6 +19,7 @@ def posts_by_category(request, category_id):
     # category = get_object_or_404(Category, pk=category_id)
     
     
+   
     
     context = {
         'posts': posts,
@@ -34,3 +35,7 @@ def blogs(request, slug):
         'single_blog' : single_blog,
     }
     return render(request, 'blogs.html', context)
+
+
+def search(request):
+    return render(request, "search.html")
