@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Category(models.Model):
     category_name = models.CharField(max_length=50, unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    update_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now=True)
     
     
     # by default django makes the name plural by adding 's' after the name of the model so 'Category' becomes 'Categorys'

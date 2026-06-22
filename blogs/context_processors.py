@@ -11,3 +11,4 @@ def get_categories(request):
 def get_links(request):
     links = Link.objects.all()
     return dict(links = links)
+
