@@ -27,7 +27,7 @@ STATUS_CHOICES = (
 
 class Blog(models.Model):
     title = models.CharField(max_length=200)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE)   # models.CASCADE ensures that if the user is deleted all his posts are also deleted
     featured_image = models.ImageField(upload_to='uploads/%Y/%m/%d')
