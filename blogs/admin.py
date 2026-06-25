@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Blog
+from .models import Category, Blog, Comment
 
 # prepopulated fields for generating slug sutomatically
 class BlogAdmin(admin.ModelAdmin):
@@ -14,4 +14,5 @@ class BlogAdmin(admin.ModelAdmin):
 # by default the models created are not visible in the admin panel, we have first register the model in the admin.py
 admin.site.register(Category)
 admin.site.register(Blog, BlogAdmin)
+admin.site.register(Comment)
 

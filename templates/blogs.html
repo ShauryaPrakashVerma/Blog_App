@@ -44,10 +44,12 @@
                     <br>
                     <div class="form-group">
                         {% if user.is_authenticated %}
+
+                        <!-- we need not specify the action url because by deafult it will be submitted to the url of the page -->
                         <form action="" method="POST">
                             {% csrf_token %}
                             <div class="form-group">
-                                <textarea name="comment" class="form-control" placeholder="Write your comment"></textarea>
+                                <textarea name="comment" class="form-control" placeholder="Write your comment ..."></textarea>
                                 <input type="submit" value="Submit" class="btn btn-primary mt-2">
                             </div>
 
